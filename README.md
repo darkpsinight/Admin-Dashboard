@@ -13,4 +13,4 @@
 - React Single Item Page Design
 - React Form Page Design
 - React Dark Mode with Context API and UseRedux
-- Syle: sass
+- Style: sass
