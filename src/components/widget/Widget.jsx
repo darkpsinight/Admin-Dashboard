@@ -4,6 +4,7 @@ import AccountBalanceOutlinedIcon from "@mui/icons-material/AccountBalanceOutlin
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import "./widget.scss";
+import { Link } from "react-router-dom";
 
 const widget = ({ type }) => {
   let data;
@@ -79,7 +80,9 @@ const widget = ({ type }) => {
         <span className="counter">
           {amount} {data.isMoney && "DT"}
         </span>
-        <span className="link">{data.link}</span>
+        <Link to={"#"} className="linkWidget">
+          <span className="link">{data.link}</span>
+        </Link>
       </div>
       <div className="right">
         <div className="percentage positive">

@@ -12,8 +12,12 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import { Link } from "react-router-dom";
 import "./sidebar.scss";
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContext";
 
 const Sidebar = () => {
+  const { dispatch } = useContext(DarkModeContext);
+
   return (
     <div className="sidebar">
       <div className="top">
@@ -104,8 +108,15 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <span style={{ color: "gray", fontSize: "15px" }}>UI COLOR:</span>
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "DARK" })}
+        ></div>
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "LIGHT" })}
+        ></div>
       </div>
     </div>
   );

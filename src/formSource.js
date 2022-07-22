@@ -32,13 +32,13 @@ export const userInputs = [
         id: 6,
         label: "Address",
         type: "text",
-        placeholder: "Elton St. 216 NewYork",
+        placeholder: "Hammam Sousse 2",
     },
     {
         id: 7,
         label: "Country",
         type: "text",
-        placeholder: "USA",
+        placeholder: "Tunisia",
     },
 ];
 
